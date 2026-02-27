@@ -42,7 +42,7 @@ export const projects = [
     id: 1,
     title: "E-Commerce Platform",
     description: "A full-featured e-commerce platform with cart functionality, payment integration, and user authentication.",
-    image: "public/Ecommerce.png",
+    image: "/Ecommerce.png",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
     github: "https://github.com/Awais-0/Ecommerce-MERN",
     // live: "https://ecommerce-demo.com"
@@ -51,7 +51,7 @@ export const projects = [
     id: 2,
     title: "Jobsite Sentry",
     description: "A Big complex Sites management tool with real-time camera managements and team workspace features.",
-    image: "public/jobsite.png",
+    image: "/Jobsite.png",
     tags: ["React", "Bootstrap", "Vite"],
     // github: "https://github.com/johndoe/task-app",
     live: "https://cmd.jobsitesentry.com/login"
