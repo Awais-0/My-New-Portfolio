@@ -15,7 +15,7 @@ const Skills = () => {
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
             My Skills
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-gray-600 dark:text-white max-w-2xl mx-auto">
             These are the technologies and tools I use to bring ideas to life.
           </p>
         </div>
@@ -45,6 +45,13 @@ const Skills = () => {
             </button>
           </div>
         </div>
+
+        {activeTab !== 'Web Dev' && <motion.p initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }} className="mt-3 text-md text-center text-gray-600 dark:text-purple-300 max-w-2xl mx-auto">
+            Currently diving deep into mastering this — one step closer to leveling up.
+        </motion.p>}
 
         <div className="mt-16">
           <AnimatePresence mode="wait">

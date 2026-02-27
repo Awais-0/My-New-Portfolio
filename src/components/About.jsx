@@ -78,7 +78,7 @@ const About = () => {
                   <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200 dark:border-white/10">
                     <div>
                       <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                        3+
+                        1+
                       </p>
                       <p className="text-sm text-gray-600 dark:text-white/60">
                         Years
@@ -86,7 +86,7 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                        20+
+                        7+
                       </p>
                       <p className="text-sm text-gray-600 dark:text-white/60">
                         Projects
