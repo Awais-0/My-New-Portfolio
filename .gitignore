@@ -5,23 +5,36 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
+# Dependency directories
+node_modules/
+# Build output
+dist/
+dist-ssr/
+# Vite temporary files
+vite
+# Editor-specific files
+vscode/
+idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-
-/.env
+# System files
+DS_Store
+Thumbs.db
+# ESLint cache
+eslintcache
+# Optional npm/yarn/pnpm files
+npm/
+yarn-integrity
+# Output of `npm pack`
+*.tgz
+# Local environment files
+env
+env.local
+env.*.local
 .env
+/.env
+# Coverage reports (if using testing tools like Jest)
+coverage/
