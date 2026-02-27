@@ -1,0 +1,155 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+   /* Text colors (semantic) */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748b;
+  --color-text-inverted: #f8fafc;
+  
+  /* Light theme colors */
+  --color-gray-50: #ffffff;
+  --color-gray-100: #f8fafc;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+  
+  --color-blue-600: #2563eb;
+  --color-purple-600: #7c3aed;
+  --color-pink-600: #db2777;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+/* Ensure links and buttons don't show default cursor */
+a, button, [role="button"], input, select, textarea {
+  cursor: none !important;
+}
+
+/* Custom scrollbar for better aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+
+/* Dark theme styles */
+&:where(.dark, .dark *) {
+
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-text-inverted: #0f172a;
+  
+  /* Dark theme colors - even darker backgrounds */
+  --color-gray-50: #000000;
+  --color-gray-100: #030712;
+  --color-gray-200: #0f172a;
+  --color-gray-300: #1e293b;
+  --color-gray-400: #334155;
+  --color-gray-500: #475569;
+  --color-gray-600: #64748b;
+  --color-gray-700: #788392;
+  --color-gray-800: #526e92;
+  --color-gray-900: #1c3b64;
+  
+  --color-blue-600: #020408;
+  --color-purple-600: #8b5cf6;
+  --color-pink-600: #ec4899;
+
+  /* Scrollbar styles for dark mode */
+  ::-webkit-scrollbar-track {
+    background: var(--color-gray-800);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gray-600);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-500);
+  }
+}
+
+/* Section padding fix for navbar */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Gradient utilities */
+.gradient-bg-primary {
+  background: linear-gradient(135deg, var(--color-blue-600), var(--color-purple-600));
+}
+
+.gradient-bg-secondary {
+  background: linear-gradient(135deg, var(--color-purple-600), var(--color-pink-600));
+}
+
+.gradient-text-primary {
+  background: linear-gradient(135deg, var(--color-blue-600), var(--color-purple-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-secondary {
+  background: linear-gradient(135deg, var(--color-purple-600), var(--color-pink-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode gradients */
+&:where(.dark, .dark *) {
+  .gradient-bg-primary {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  }
+  
+  .gradient-bg-secondary {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  }
+  
+  .gradient-text-primary {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-secondary {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
